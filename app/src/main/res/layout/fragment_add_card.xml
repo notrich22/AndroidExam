@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add_card">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textSize="40dp"
+            />
+
+        <EditText
+            android:id="@+id/editTextLast4Numbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Last 4 Numbers"
+            android:textSize="40dp"
+            />
+
+        <Button
+            android:id="@+id/buttonAddCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add card"
+            android:layout_gravity="center"
+            android:textSize="40dp"
+            />
+        <ListView
+            android:id="@+id/listViewCards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</FrameLayout>
