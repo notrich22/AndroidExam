@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
                     navController.navigate(R.id.historyFragment)
                     true
                 }
-                R.id.settings ->{
-                    navController.navigate(R.id.settingsFragment)
-                    true
-                }
+                //R.id.settings ->{
+                //    navController.navigate(R.id.settingsFragment)
+                 //   true
+                //}
                 else -> false
             }
         }

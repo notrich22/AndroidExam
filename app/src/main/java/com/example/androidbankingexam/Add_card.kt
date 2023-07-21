@@ -119,7 +119,7 @@ class Add_card : Fragment() {
             val last4Numbers = editTextLast4Numbers.text.toString()
 
             if (cardName.isNotEmpty() && last4Numbers.length == 4 ) {
-                val newCard = Card(UUID.randomUUID().toString(), cardName, last4Numbers, 0.0)
+                val newCard = Card(UUID.randomUUID().toString(), cardName, last4Numbers)
 
                 saveCard(newCard)
 

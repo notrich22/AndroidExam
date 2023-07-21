@@ -4,7 +4,6 @@ class Card(
     private var id: String,
     private var name: String,
     private var last4numbers: String,
-    private var balance: Double
     ) {
 
     fun getName(): String {
@@ -23,11 +22,5 @@ class Card(
 
     fun setLast4Numbers(last4numbers: String) {
         this.last4numbers = last4numbers
-    }
-    fun getBalance() : Double{
-        return balance
-    }
-    fun setBalance(newBalance : Double){
-        this.balance = newBalance
     }
 }

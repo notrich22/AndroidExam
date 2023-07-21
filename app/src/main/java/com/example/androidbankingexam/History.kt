@@ -69,7 +69,7 @@ class History : Fragment() {
                     .format(historyItem.dateTime)
                 textViewDateTime.text = dateTimeString
 
-                textViewLastFourDigits.text = historyItem.card.getLast4Numbers()
+                textViewLastFourDigits.text = historyItem.card.getName()
 
                 buttonEdit.setOnClickListener {
                     context?.let { it -> showEditDialog(position, it, historyItem) }
@@ -78,7 +78,7 @@ class History : Fragment() {
                 buttonDelete.setOnClickListener {
                     removeHistoryItem(historyItem.id)
                     updateHistoryItems()
-                    Toast.makeText(itemView.context, "Delete button clicked", Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(itemView.context, "Delete button clicked", Toast.LENGTH_SHORT).show()
                 }
 
                 return itemView
@@ -158,7 +158,7 @@ class History : Fragment() {
         historyItems.clear()
         historyItems.addAll(getAllHistoryItems())
         historyItems.sortBy { it.dateTime }
-        Log.d("DEBUG HI", "History Items: $historyItems")
+        //Log.d("DEBUG HI", "History Items: $historyItems")
         adapter.notifyDataSetChanged()
     }
 
@@ -173,7 +173,7 @@ class History : Fragment() {
             val hiJSON = entry.value as? String ?: continue
 
             try {
-                Log.d("DEBUG HI", hiJSON)
+                //Log.d("DEBUG HI", hiJSON)
                 val hi = Gson().fromJson(hiJSON, HistoryItem::class.java)
                 historyItems.add(hi)
             } catch (e: JsonSyntaxException) {

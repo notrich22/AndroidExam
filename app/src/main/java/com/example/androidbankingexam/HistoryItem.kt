@@ -1,5 +1,8 @@
 package com.example.androidbankingexam
 
+import android.content.Context
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import java.time.LocalDateTime
 import java.time.chrono.ChronoLocalDateTime
 import java.util.Calendar
@@ -20,7 +23,7 @@ data class HistoryItem(
                 val amount = parts[1].toDoubleOrNull()
                 val isExpense = parts[2].toBooleanStrictOrNull()
                 val cardId = parts[3]
-                val card = getCardById(cardId)
+                val card = Card("CARD ID", "NAME OF CARD", "3229")
                 if (amount != null && isExpense != null && card != null) {
                     return HistoryItem(id, amount, isExpense, card)
                 }
@@ -29,8 +32,8 @@ data class HistoryItem(
         }
 
 
-        private fun getCardById(cardId: String): Card? {
-            return null
+        fun getCardById(context: Context, cardId: String): Card? {
+            return null;
         }
     }
 }
